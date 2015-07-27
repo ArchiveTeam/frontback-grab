@@ -67,7 +67,7 @@ wget.callbacks.get_urls = function(file, url, is_css, iri)
     end
   end
   
-  if item_type == "useren" then
+  if item_type == "image" then
     if string.match(url, "[^A-Za-z0-9]"..item_value) and string.match(url, "frontback%.me") and not string.match(url, "[^A-Za-z0-9]"..item_value..".") then
       html = read_file(file)
       for newurl in string.gmatch(html, '"(https?://[^"]+)"') do
